@@ -912,10 +912,13 @@ class fORMRelated
 		
 		$filter          = self::determineRequestFilter($class, $related_class, $route);
 		$pk_field        = $filter . $first_pk_column;
-		
-		$input_keys = array_keys(fRequest::get($pk_field, 'array', array()));
-		$records    = array();
-		
+
+		$records         = array();
+		$related_keys    = fRequest::get($pk_field);
+		$input_keys      = is_array($related_keys)
+			? array_keys($related_keys)
+			: [NULL];
+
 		foreach ($input_keys as $input_key) {
 			fRequest::filter($filter, $input_key);
 			
