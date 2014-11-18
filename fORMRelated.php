@@ -914,10 +914,14 @@ class fORMRelated
 		$pk_field        = $filter . $first_pk_column;
 
 		$records         = array();
-		$related_keys    = fRequest::get($pk_field);
-		$input_keys      = is_array($related_keys)
-			? array_keys($related_keys)
-			: [NULL];
+		$input_keys	     = array();
+
+		if (fRequest::check($pk_field)) {
+			$related_keys = fRequest::get($pk_field);
+			$input_keys   = is_array($related_keys)
+				? array_keys($related_keys)
+				: [NULL];
+		}
 
 		foreach ($input_keys as $input_key) {
 			fRequest::filter($filter, $input_key);
