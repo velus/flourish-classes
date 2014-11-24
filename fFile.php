@@ -6,12 +6,14 @@
  * @author     Will Bond [wb] <will@flourishlib.com>
  * @author     Will Bond, iMarc LLC [wb-imarc] <will@imarc.net>
  * @author     Kevin Hamer [kh] <kevin@imarc.net>
+ * @author     Brian Tam [bt] <brian@imarc.net>
  * @license    http://flourishlib.com/license
  *
  * @package    Flourish
  * @link       http://flourishlib.com/fFile
  *
  * @version    1.0.0b40
+ * @changes    1.0.0b41  Better detection of MS filetypes (pptx, docx, xlsx) [bt, 2014-11-13]
  * @changes    1.0.0b40  Better handling of text filetype detection [kh, 2012-12-10]
  * @changes    1.0.0b39  Backwards Compatibility Break - ::output() now automatically ends any open output buffering and discards the contents [wb, 2011-08-24]
  * @changes    1.0.0b38  Added the Countable interface to the class [wb, 2011-06-03]
@@ -307,6 +309,19 @@ class fFile implements Iterator, Countable
 
 		// Archives
 		if ($_0_4 == "PK\x03\x04") {
+
+			if (in_array($extension, array('xlsx'))) {
+				return 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+			}
+
+			if (in_array($extension, array('pptx'))) {
+				return 'application/vnd.openxmlformats-officedocument.presentationml.presentation';
+			}
+
+			if (in_array($extension, array('docx'))) {
+				return 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+			}
+
 			return 'application/zip';
 		}
 
