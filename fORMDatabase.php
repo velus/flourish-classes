@@ -10,7 +10,8 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fORMDatabase
  *
- * @version    1.0.0b32
+ * @version    1.0.0b33
+ * @changes    1.0.0b33  Added =~ operators [jt, 2014-11-25]
  * @changes    1.0.0b32  Added support to ::addWhereClause() for the `^~` and `$~` operators [wb, 2011-06-20]
  * @changes    1.0.0b31  Fixed a bug with ::addWhereClause() generating invalid SQL [wb, 2011-05-10]
  * @changes    1.0.0b30  Fixed ::insertFromAndGroupByClauses() to insert `MAX()` around columns in related tables in the `ORDER BY` clause when a `GROUP BY` is used [wb, 2011-02-03]
@@ -207,6 +208,15 @@ class fORMDatabase
 					foreach ($values as $value) {
 						$condition[] = $escaped_column . ' LIKE %s';
 						$params[] = '%' . $value . '%';
+					}
+					$params[0] .= '(' . join(' OR ', $condition) . ')';
+					break;
+
+				case '=~':
+					$condition = array();
+					foreach ($values as $value) {
+						$condition[] = $escaped_column . ' LIKE %s';
+						$params[] = $value;
 					}
 					$params[0] .= '(' . join(' OR ', $condition) . ')';
 					break;
@@ -544,7 +554,7 @@ class fORMDatabase
 					array('<>:' => '!:', '!=:' => '!:')
 				);
 				$column   = substr($column, 0, -3);
-			} elseif (in_array(substr($column, -2), array('<=', '>=', '!=', '<>', '!~', '&~', '^~', '$~', '><', '=:', '!:', '<:', '>:'))) {
+			} elseif (in_array(substr($column, -2), array('<=', '>=', '!=', '<>', '=~', '!~', '&~', '^~', '$~', '><', '=:', '!:', '<:', '>:'))) {
 				$operator = strtr(
 					substr($column, -2),
 					array('<>' => '!', '!=' => '!')
@@ -585,7 +595,7 @@ class fORMDatabase
 							array('<>:' => '!:', '!=:' => '!:')
 						);
 						$_column     = substr($_column, 0, -3);
-					} elseif (in_array(substr($_column, -2), array('<=', '>=', '!=', '<>', '!~', '&~', '^~', '$~', '=:', '!:', '<:', '>:'))) {
+					} elseif (in_array(substr($_column, -2), array('<=', '>=', '!=', '<>', '=~', '!~', '&~', '^~', '$~', '=:', '!:', '<:', '>:'))) {
 						$operators[] = strtr(
 							substr($_column, -2),
 							array('<>' => '!', '!=' => '!')

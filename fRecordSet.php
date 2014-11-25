@@ -78,6 +78,7 @@ class fRecordSet implements IteratorAggregate, ArrayAccess, Countable
 	 * 'column!='                   => VALUE                        // column <> VALUE
 	 * 'column<>'                   => VALUE                        // column <> VALUE
 	 * 'column~'                    => VALUE                        // column LIKE '%VALUE%'
+	 * 'column=~'                   => VALUE                        // column LIKE 'VALUE'
 	 * 'column^~'                   => VALUE                        // column LIKE 'VALUE%'
 	 * 'column$~'                   => VALUE                        // column LIKE '%VALUE'
 	 * 'column!~'                   => VALUE                        // column NOT LIKE '%VALUE%'
