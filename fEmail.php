@@ -18,7 +18,8 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fEmail
  *
- * @version    1.0.0b30
+ * @version    1.0.0b31
+ * @changes    1.0.0b31  Added method to get the submission e-mail only (useful for SMTP login) [mjs, 2014-10-21]
  * @changes    1.0.0b30  Changed methods to return instance for method chaining [n, 2011-09-12]
  * @changes    1.0.0b29  Changed ::combineNameEmail() to be a static method and to be exposed publicly for use by other classes [wb, 2011-07-26]
  * @changes    1.0.0b28  Fixed ::addAttachment() and ::addRelatedFile() to properly handle duplicate filenames [wb, 2011-05-17]
@@ -1198,6 +1199,23 @@ class fEmail
 		}
 		$extension = ($filename_info['extension']) ? '.' . $filename_info['extension'] : '';
 		return preg_replace('#_copy\d+$#D', '', $filename_info['filename']) . '_copy' . $i . $extension;
+	}
+
+
+	/**
+	 * Get the actual submission e-mail taking into account sender
+	 *
+	 * @return string The submission e-mail, NULL if no submitter has been set
+	 */
+	public function getSubmissionEmail()
+	{
+		if (preg_match(self::NAME_EMAIL_REGEX, $this->sender_email, $match)) {
+			return $match[2];
+		} elseif (preg_match(self::NAME_EMAIL_REGEX, $this->from_email, $match)) {
+			return $match[2];
+		} else {
+			return NULL;
+		}
 	}
 
 
