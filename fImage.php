@@ -11,7 +11,8 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fImage
  *
- * @version    1.0.0b35
+ * @version    1.0.0b36
+ * @changes    1.0.0b36  Added arg for saveChanges to allow for saving the image even if there are no pending modifications [jt, 2014-12-23]
  * @changes    1.0.0b35  Fixed an issue with ImageMagick 6.7.5+ and colorspace argument [jt, 2014-01-09]
  * @changes    1.0.0b34  Fixed a bug in getImageType() where the fread was not reading enough bytes [jt, 2012-06-05]
  * @changes    1.0.0b33  Fixed a method signature [wb, 2011-08-24]
@@ -1366,11 +1367,12 @@ class fImage extends fFile
 	 * @param  string  $new_image_type  The new file format for the image: 'NULL` (no change), `'jpg'`, `'gif'`, `'png'`
 	 * @param  integer $jpeg_quality    The quality setting to use for JPEG images - this may be ommitted
 	 * @param  boolean $overwrite       If an existing file with the same name and extension should be overwritten
+	 * @param  boolean $force_write     Forces the write of the image file even if there are no pending modifications
 	 * @param  string  |$new_image_type
 	 * @param  boolean |$overwrite
 	 * @return fImage  The image object, to allow for method chaining
 	 */
-	public function saveChanges($new_image_type=NULL, $jpeg_quality=90, $overwrite=FALSE)
+	public function saveChanges($new_image_type=NULL, $jpeg_quality=90, $overwrite=FALSE, $force_write=FALSE)
 	{
 		// This allows ommitting the $jpeg_quality parameter, which is very useful for non-jpegs
 		$args = func_get_args();
@@ -1455,7 +1457,7 @@ class fImage extends fFile
 		}
 
 		// If we don't have any changes and no name change, just exit
-		if (!$this->pending_modifications && $output_file == $this->file) {
+		if (!$force_write && !$this->pending_modifications && $output_file == $this->file) {
 			return $this;
 		}
 
