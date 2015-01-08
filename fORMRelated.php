@@ -920,7 +920,7 @@ class fORMRelated
 		$records         = array();
 		$input_keys      = array();
 
-		if (fRequest::check($pk_field)) {
+		if (fRequest::check($pk_field, TRUE)) {
 			$related_keys = fRequest::get($pk_field);
 			$input_keys   = is_array($related_keys)
 				? array_keys($related_keys)

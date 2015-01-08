@@ -231,9 +231,10 @@ class fRequest
 	 * Indicated if the parameter specified is set in the `$_GET` or `$_POST` superglobals or in the post data of a `PUT` or `DELETE` request
 	 *
 	 * @param  string $key  The key to check - array elements can be checked via `[sub-key]` syntax
+	 * @param  boolean $allow_null  Check if the value exists in the array as NULL
 	 * @return boolean  If the parameter is set
 	 */
-	static public function check($key)
+	static public function check($key, $allow_null = FALSE)
 	{
 		self::initPutDelete();
 
@@ -244,8 +245,14 @@ class fRequest
 			$key               = substr($key, 0, $bracket_pos);
 		}
 
-		if (!isset($_GET[$key]) && !isset($_POST[$key]) && !isset(self::$put_delete[$key])) {
-			return FALSE;
+		if (!$allow_null) {
+			if (!isset($_GET[$key]) && !isset($_POST[$key]) && !isset(self::$put_delete[$key])) {
+				return FALSE;
+			}
+		} else {
+			if (!array_key_exists($key, $_GET) && !array_key_exists($key, $_POST) && !array_key_exists($key, self::$put_delete)) {
+				return FALSE;
+			}
 		}
 
 		$values = array($_GET, $_POST, self::$put_delete);
@@ -266,7 +273,9 @@ class fRequest
 			$key = end($array_keys);
 		}
 
-		return isset($values[0][$key]) || isset($values[1][$key]) || isset($values[2][$key]);
+		return $allow_null
+			? array_key_exists($key, $values[0]) || array_key_exists($key, $values[1]) || array_key_exists($key, self::$values[2])
+			: isset($values[0][$key]) || isset($values[1][$key]) || isset($values[2][$key]);
 	}
 
 
@@ -780,7 +789,7 @@ class fRequest
 				$q = number_format(1.0, 5);
 			}
 			$q .= $suffix--;
-			
+
 			$output[trim($parts[0])] = $q;
 		}
 
