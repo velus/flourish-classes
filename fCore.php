@@ -13,7 +13,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fCore
  *
- * @version    1.0.0b26
+ * @version 1.0.0
  */
 class fCore
 {

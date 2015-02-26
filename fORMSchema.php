@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fORMSchema
  *
- * @version    1.0.0b9
+ * @version 1.0.0
  */
 class fORMSchema
 {

@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fCache
  *
- * @version    1.0.0b6
+ * @version 1.0.0
  */
 class fCache
 {

@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fText
  *
- * @version    1.0.0b2
+ * @version 1.0.0
  */
 class fText
 {

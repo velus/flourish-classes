@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fTime
  *
- * @version    1.0.0b12
+ * @version 1.0.0
  */
 class fTime
 {

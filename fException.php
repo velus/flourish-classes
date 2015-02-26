@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fException
  *
- * @version    1.0.0b8
+ * @version 1.0.0
  */
 abstract class fException extends Exception
 {

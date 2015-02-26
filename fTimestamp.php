@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fTimestamp
  *
- * @version    1.0.0b13
+ * @version 1.0.0
  */
 class fTimestamp
 {

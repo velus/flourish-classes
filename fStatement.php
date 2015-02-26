@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fStatement
  *
- * @version    1.0.0b7
+ * @version 1.0.0
  */
 class fStatement
 {

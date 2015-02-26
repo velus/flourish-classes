@@ -14,7 +14,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fORMRelated
  *
- * @version    1.0.0b47
+ * @version 1.0.0
  */
 class fORMRelated
 {

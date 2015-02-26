@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fSchema
  *
- * @version    1.0.0b51
+ * @version 1.0.0
  */
 class fSchema
 {

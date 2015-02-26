@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fResult
  *
- * @version    1.0.0b13
+ * @version 1.0.0
  */
 class fResult implements Iterator
 {

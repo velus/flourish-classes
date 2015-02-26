@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fNoRowsException
  *
- * @version    1.0.0b
+ * @version 1.0.0
  */
 class fNoRowsException extends fExpectedException
 {

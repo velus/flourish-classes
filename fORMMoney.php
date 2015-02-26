@@ -10,7 +10,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fORMMoney
  *
- * @version    1.0.0b11
+ * @version 1.0.0
  */
 class fORMMoney
 {

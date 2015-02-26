@@ -10,7 +10,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fDirectory
  *
- * @version    1.0.0b14
+ * @version 1.0.0
  */
 class fDirectory
 {

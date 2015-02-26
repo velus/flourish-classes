@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fDate
  *
- * @version    1.0.0b11
+ * @version 1.0.0
  */
 class fDate
 {

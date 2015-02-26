@@ -11,7 +11,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fUpload
  *
- * @version    1.0.0b16
+ * @version 1.0.0
  */
 class fUpload
 {

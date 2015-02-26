@@ -15,7 +15,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fSession
  *
- * @version    1.0.0b23
+ * @version 1.0.0
  */
 class fSession
 {

@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fGrammar
  *
- * @version    1.0.0b15
+ * @version 1.0.0
  */
 class fGrammar
 {

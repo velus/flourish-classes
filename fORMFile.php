@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fORMFile
  *
- * @version    1.0.0b30
+ * @version 1.0.0
  */
 class fORMFile
 {

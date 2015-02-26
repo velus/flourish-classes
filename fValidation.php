@@ -10,7 +10,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fValidation
  *
- * @version    1.0.0b13
+ * @version 1.0.0
  */
 class fValidation
 {

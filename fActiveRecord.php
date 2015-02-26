@@ -17,7 +17,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fActiveRecord
  *
- * @version    1.0.0b84
+ * @version 1.0.0
  */
 abstract class fActiveRecord
 {

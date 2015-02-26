@@ -10,7 +10,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fMessaging
  *
- * @version    1.0.0b8
+ * @version 1.0.0
  */
 class fMessaging
 {

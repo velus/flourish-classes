@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fCryptography
  *
- * @version    1.0.0b14
+ * @version 1.0.0
  */
 class fCryptography
 {

@@ -12,7 +12,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fMailbox
  *
- * @version    1.0.0b18
+ * @version 1.0.0
  */
 class fMailbox
 {

@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fRecordSet
  *
- * @version    1.0.0b47
+ * @version 1.0.0
  */
 class fRecordSet implements IteratorAggregate, ArrayAccess, Countable
 {

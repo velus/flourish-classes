@@ -11,7 +11,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fTemplating
  *
- * @version    1.0.0b24
+ * @version 1.0.0
  */
 class fTemplating
 {

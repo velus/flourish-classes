@@ -18,7 +18,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fEmail
  *
- * @version    1.0.0b31
+ * @version 1.0.0
  */
 class fEmail
 {

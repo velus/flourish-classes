@@ -10,7 +10,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fLoader
  *
- * @version    1.0.0b3
+ * @version 1.0.0
  */
 class fLoader
 {

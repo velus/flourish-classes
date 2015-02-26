@@ -48,7 +48,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fDatabase
  *
- * @version    1.0.0
+ * @version 1.0.0
  */
 class fDatabase
 {

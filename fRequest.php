@@ -19,7 +19,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fRequest
  *
- * @version    1.0.0b22
+ * @version 1.0.0
  */
 class fRequest
 {

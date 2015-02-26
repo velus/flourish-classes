@@ -10,7 +10,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fORMValidation
  *
- * @version    1.0.0b32
+ * @version 1.0.0
  */
 class fORMValidation
 {
