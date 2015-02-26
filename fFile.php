@@ -12,7 +12,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fFile
  *
- * @version 1.0.0
+ * @version 1.1.0
  */
 class fFile implements Iterator, Countable
 {

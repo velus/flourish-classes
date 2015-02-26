@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fNoRemainingException
  *
- * @version 1.0.0
+ * @version 1.1.0
  */
 class fNoRemainingException extends fExpectedException
 {
