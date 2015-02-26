@@ -15,7 +15,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fSession
  *
- * @version 1.1.0
+ * @version 1.1.1
  */
 class fSession
 {
@@ -353,7 +353,7 @@ class fSession
 	 */
 	static public function exists()
 	{
-		if (!function_exists('session_status')) {
+		if (function_exists('session_status')) {
 			return session_status() == PHP_SESSION_ACTIVE;
 		}
 
