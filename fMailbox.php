@@ -13,24 +13,6 @@
  * @link       http://flourishlib.com/fMailbox
  *
  * @version    1.0.0b18
- * @changes    1.0.0b18  Fixed a bug in ::fetchMessageSource() where IMAP connections would add an extra `\r\n` to the end of the source [wb, 2012-09-16]
- * @changes    1.0.0b17  Updated the class to be more forgiving when parsing the response for `STATUS` and `FETCH` IMAP commands [wb, 2012-09-15]
- * @changes    1.0.0b16  Added method ::fetchMessageSource() [wb, 2012-09-15]
- * @changes    1.0.0b15  Fixed handling of bounces with no headers [wb, 2012-09-15]
- * @changes    1.0.0b14  Added a workaround for iconv having issues in MAMP 1.9.4+ [wb, 2011-07-26]
- * @changes    1.0.0b13  Fixed handling of headers in relation to encoded-words being embedded inside of quoted strings [wb, 2011-07-26]
- * @changes    1.0.0b12  Enhanced the error checking in ::write() [wb, 2011-06-03]
- * @changes    1.0.0b11  Added code to work around PHP bug #42682 (http://bugs.php.net/bug.php?id=42682) where `stream_select()` doesn't work on 64bit machines from PHP 5.2.0 to 5.2.5, improved connectivity error handling and timeouts while reading data [wb, 2011-01-10]
- * @changes    1.0.0b10  Fixed ::parseMessage() to properly handle a header format edge case and properly set the `text` and `html` keys even when the email has an explicit `Content-disposition: inline` header [wb, 2010-11-25]
- * @changes    1.0.0b9   Fixed a bug in ::parseMessage() that could cause HTML alternate content to be included in the `inline` content array instead of the `html` element [wb, 2010-09-20]
- * @changes    1.0.0b8   Fixed ::parseMessage() to be able to handle non-text/non-html multipart parts that do not have a `Content-disposition` header [wb, 2010-09-18]
- * @changes    1.0.0b7   Fixed a typo in ::read() [wb, 2010-09-07]
- * @changes    1.0.0b6   Fixed a typo from 1.0.0b4 [wb, 2010-07-21]
- * @changes    1.0.0b5   Fixes for increased compatibility with various IMAP and POP3 servers, hacked around a bug in PHP 5.3 on Windows [wb, 2010-06-22]
- * @changes    1.0.0b4   Added code to handle emails without an explicit `Content-type` header [wb, 2010-06-04]
- * @changes    1.0.0b3   Added missing static method callback constants [wb, 2010-05-11]
- * @changes    1.0.0b2   Added the missing ::enableDebugging() [wb, 2010-05-05]
- * @changes    1.0.0b    The initial implementation [wb, 2010-05-05]
  */
 class fMailbox
 {

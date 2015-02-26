@@ -10,9 +10,6 @@
  * @link       http://flourishlib.com/fNumber
  *
  * @version    1.0.0b3
- * @changes    1.0.0b3  Added the `$remove_zero_fraction` parameter to ::format() [wb, 2011-02-02]
- * @changes    1.0.0b2  Fixed a bug with parsing decimal numbers in scientific notation [wb, 2010-04-13]
- * @changes    1.0.0b   The initial implementation [wb, 2008-07-21]
  */
 class fNumber
 {

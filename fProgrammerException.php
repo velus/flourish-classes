@@ -10,7 +10,6 @@
  * @link       http://flourishlib.com/fProgrammerException
  *
  * @version    1.0.0b
- * @changes    1.0.0b  The initial implementation [wb, 2007-06-14]
  */
 class fProgrammerException extends fUnexpectedException
 {

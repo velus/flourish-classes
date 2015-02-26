@@ -10,12 +10,6 @@
  * @link       http://flourishlib.com/fCache
  *
  * @version    1.0.0b6
- * @changes    1.0.0b6  Fixed a bug with ::add() setting a value when it shouldn't if no ttl was given for the file backend [wb, 2012-01-12]
- * @changes    1.0.0b5  Added missing documentation for using Redis as a backend [wb, 2011-08-25]
- * @changes    1.0.0b4  Added the `database`, `directory` and `redis` types, added support for the memcached extention and support for custom serialization callbacks [wb, 2011-06-21]
- * @changes    1.0.0b3  Added `0` to the memcache delete method call since otherwise the method triggers notices on some installs [wb, 2011-05-10]
- * @changes    1.0.0b2  Fixed API calls to the memcache extension to pass the TTL as the correct parameter [wb, 2011-02-01]
- * @changes    1.0.0b   The initial implementation [wb, 2009-04-28]
  */
 class fCache
 {

@@ -12,22 +12,6 @@
  * @link       http://flourishlib.com/fUpload
  *
  * @version    1.0.0b16
- * @changes    1.0.0b16  Added ::getParameter to fetch uploaded file parameters, including file contents [bt, 2014-11-13]
- * @changes    1.0.0b15  Fixed an undefined variable error in ::setMaxSize() [wb, 2012-09-16]
- * @changes    1.0.0b14  Fixed some method signatures [wb, 2011-08-24]
- * @changes    1.0.0b13  Changed the class to throw fValidationException objects instead of fProgrammerException objects when the form is improperly configured - this is to prevent error logs when bad requests are sent by scanners/hackers [wb, 2011-08-24]
- * @changes    1.0.0b12  Fixed the ::filter() callback constant [wb, 2010-11-24]
- * @changes    1.0.0b11  Added ::setImageDimensions() and ::setImageRatio() [wb-imarc, 2010-11-11]
- * @changes    1.0.0b10  BackwardsCompatibilityBreak - renamed ::setMaxFilesize() to ::setMaxSize() to be consistent with fFile::getSize() [wb, 2010-05-30]
- * @changes    1.0.0b9   BackwardsCompatibilityBreak - the class no longer accepts uploaded files that start with a `.` unless ::allowDotFiles() is called - added ::setOptional() [wb, 2010-05-30]
- * @changes    1.0.0b8   BackwardsCompatibilityBreak - ::validate() no longer returns the `$_FILES` array for the file being validated - added `$return_message` parameter to ::validate(), fixed a bug with detection of mime type for text files [wb, 2010-05-26]
- * @changes    1.0.0b7   Added ::filter() to allow for ignoring array file upload field entries that did not have a file uploaded [wb, 2009-10-06]
- * @changes    1.0.0b6   Updated ::move() to use the new fFilesystem::createObject() method [wb, 2009-01-21]
- * @changes    1.0.0b5   Removed some unnecessary error suppression operators from ::move() [wb, 2009-01-05]
- * @changes    1.0.0b4   Updated ::validate() so it properly handles upload max filesize specified in human-readable notation [wb, 2009-01-05]
- * @changes    1.0.0b3   Removed the dependency on fRequest [wb, 2009-01-05]
- * @changes    1.0.0b2   Fixed a bug with validating filesizes [wb, 2008-11-25]
- * @changes    1.0.0b    The initial implementation [wb, 2007-06-14]
  */
 class fUpload
 {

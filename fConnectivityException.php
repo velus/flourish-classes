@@ -10,7 +10,6 @@
  * @link       http://flourishlib.com/fConnectivityException
  *
  * @version    1.0.0b
- * @changes    1.0.0b  The initial implementation [wb, 2007-06-14]
  */
 class fConnectivityException extends fUnexpectedException
 {
