@@ -11,7 +11,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fFilesystem
  *
- * @version 1.1.1
  */
 class fFilesystem
 {

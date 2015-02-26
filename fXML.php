@@ -13,7 +13,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fXML
  *
- * @version 1.1.1
  */
 class fXML implements ArrayAccess
 {

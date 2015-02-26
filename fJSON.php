@@ -17,7 +17,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fJSON
  *
- * @version 1.1.1
  */
 class fJSON
 {

@@ -9,7 +9,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fCRUD
  *
- * @version 1.1.1
  */
 class fCRUD
 {

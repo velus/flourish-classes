@@ -11,7 +11,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fImage
  *
- * @version 1.1.1
  */
 class fImage extends fFile
 {

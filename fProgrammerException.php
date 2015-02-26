@@ -9,7 +9,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fProgrammerException
  *
- * @version 1.1.1
  */
 class fProgrammerException extends fUnexpectedException
 {

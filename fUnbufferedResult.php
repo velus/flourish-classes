@@ -9,7 +9,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fUnbufferedResult
  *
- * @version 1.1.1
  */
 class fUnbufferedResult implements Iterator
 {

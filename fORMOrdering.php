@@ -10,7 +10,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fORMOrdering
  *
- * @version 1.1.1
  */
 class fORMOrdering
 {

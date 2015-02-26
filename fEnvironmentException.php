@@ -9,7 +9,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fEnvironmentException
  *
- * @version 1.1.1
  */
 class fEnvironmentException extends fUnexpectedException
 {

@@ -9,7 +9,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fUnexpectedException
  *
- * @version 1.1.1
  */
 class fUnexpectedException extends fException
 {

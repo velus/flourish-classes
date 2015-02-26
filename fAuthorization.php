@@ -9,7 +9,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fAuthorization
  *
- * @version 1.1.1
  */
 class fAuthorization
 {

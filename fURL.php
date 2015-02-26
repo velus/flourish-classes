@@ -13,7 +13,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fURL
  *
- * @version 1.1.1
  */
 class fURL
 {

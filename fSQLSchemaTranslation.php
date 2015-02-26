@@ -9,7 +9,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fSQLSchemaTranslation
  *
- * @version 1.1.1
  */
 class fSQLSchemaTranslation
 {

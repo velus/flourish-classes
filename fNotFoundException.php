@@ -9,7 +9,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fNotFoundException
  *
- * @version 1.1.1
  */
 class fNotFoundException extends fExpectedException
 {

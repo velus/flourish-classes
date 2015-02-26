@@ -9,7 +9,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fEmptySetException
  *
- * @version 1.1.1
  */
 class fEmptySetException extends fExpectedException
 {

@@ -10,7 +10,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fCookie
  *
- * @version 1.1.1
  */
 class fCookie
 {

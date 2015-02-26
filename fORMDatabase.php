@@ -10,7 +10,6 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fORMDatabase
  *
- * @version 1.1.1
  */
 class fORMDatabase
 {
