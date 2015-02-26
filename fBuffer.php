@@ -9,7 +9,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fBuffer
  *
- * @version 1.1.0
+ * @version 1.1.1
  */
 class fBuffer
 {

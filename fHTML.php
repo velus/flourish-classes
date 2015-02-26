@@ -13,7 +13,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fHTML
  *
- * @version 1.1.0
+ * @version 1.1.1
  */
 class fHTML
 {

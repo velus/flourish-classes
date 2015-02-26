@@ -10,7 +10,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fValidationException
  *
- * @version 1.1.0
+ * @version 1.1.1
  */
 class fValidationException extends fExpectedException
 {

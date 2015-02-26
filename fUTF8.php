@@ -13,7 +13,7 @@
  * @package    Flourish
  * @link       http://flourishlib.com/fUTF8
  *
- * @version 1.1.0
+ * @version 1.1.1
  */
 class fUTF8
 {
