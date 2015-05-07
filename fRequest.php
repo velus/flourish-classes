@@ -291,14 +291,24 @@ class fRequest
 		$_FILES = array();
 		foreach (self::$backup_files[$current_backup] as $field => $value) {
 			$matches_prefix = !$prefix || ($prefix && strpos($field, $prefix) === 0);
-			if ($matches_prefix && is_array($value) && isset($value['name'][$key])) {
-				$new_field = preg_replace($regex, '', $field);
-				$_FILES[$new_field]             = array();
-				$_FILES[$new_field]['name']     = $value['name'][$key];
-				$_FILES[$new_field]['type']     = $value['type'][$key];
-				$_FILES[$new_field]['tmp_name'] = $value['tmp_name'][$key];
-				$_FILES[$new_field]['error']    = $value['error'][$key];
-				$_FILES[$new_field]['size']     = $value['size'][$key];
+			if ($matches_prefix && is_array($value)) {
+				if (is_null($key)) {
+					$new_field = preg_replace($regex, '', $field);
+					$_FILES[$new_field]             = array();
+					$_FILES[$new_field]['name']     = $value['name'];
+					$_FILES[$new_field]['type']     = $value['type'];
+					$_FILES[$new_field]['tmp_name'] = $value['tmp_name'];
+					$_FILES[$new_field]['error']    = $value['error'];
+					$_FILES[$new_field]['size']     = $value['size'];
+				} elseif (isset($value['name'][$key])) {
+					$new_field = preg_replace($regex, '', $field);
+					$_FILES[$new_field]             = array();
+					$_FILES[$new_field]['name']     = $value['name'][$key];
+					$_FILES[$new_field]['type']     = $value['type'][$key];
+					$_FILES[$new_field]['tmp_name'] = $value['tmp_name'][$key];
+					$_FILES[$new_field]['error']    = $value['error'][$key];
+					$_FILES[$new_field]['size']     = $value['size'][$key];
+				}
 			}
 		}
 
