@@ -356,7 +356,8 @@ class fSession
 			return session_status() == PHP_SESSION_ACTIVE;
 		}
 
-		return isset($_SESSION);
+		//return isset($_SESSION);
+		return session_id() !== '';
 	}
 
 
@@ -491,7 +492,7 @@ class fSession
 		}
 
 		// If the session is already open, we just piggy-back without setting options
-		if (session_status() == PHP_SESSION_NONE) {
+		if (!self::exists()) {
 			if ($cookie_only_session_id) {
 				ini_set('session.use_cookies', 1);
 				ini_set('session.use_only_cookies', 1);
