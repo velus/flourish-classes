@@ -875,7 +875,7 @@ class fORMRelated
 			$related_keys = fRequest::get($pk_field);
 			$input_keys   = is_array($related_keys)
 				? array_keys($related_keys)
-				: [NULL];
+				: array(NULL);
 		}
 
 		foreach ($input_keys as $input_key) {
