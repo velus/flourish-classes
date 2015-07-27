@@ -507,7 +507,18 @@ class fSession
 					array('fSession', 'gcCache')
 				);
 			}
-			session_start();
+
+			// https://bugs.php.net/bug.php?id=68063
+			// Fix warning with Bad IDs
+			
+			fCore::startErrorCapture();
+			$started = session_start();
+			fCore::stopErrorCapture();
+
+			if (!$started) {
+				session_regenerate_id(TRUE);
+				session_start(); 
+			}
 		}
 
 		// If the session has existed for too long, reset it
