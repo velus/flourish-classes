@@ -1209,12 +1209,7 @@ abstract class fActiveRecord
 			foreach ($column_info as $column => $info) {
 				$this->values[$column] = NULL;
 				if ($info['default'] !== NULL) {
-					self::assign(
-						$this->values,
-						$this->old_values,
-						$column,
-						fORM::objectify($class, $column, $info['default'])
-					);
+					$this->values[$column] = fORM::objectify($class, $column, $info['default']);
 				}
 			}
 		}
