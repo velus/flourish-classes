@@ -355,7 +355,7 @@ class fORMRelated
 		} else {
 			$star_to_one_relationships = fORMSchema::getRoutes($schema, $table, $related_table, '*-to-one');
 			foreach ($star_to_one_relationships as $star_to_one_relationship) {
-				if ($relationship['column'] == $star_to_one_relationship['column']) {
+				if ($table != $related_table && $relationship['column'] == $star_to_one_relationship['column']) {
 					$star_to_one = TRUE;
 					break;
 				}
