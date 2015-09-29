@@ -1737,7 +1737,7 @@ abstract class fActiveRecord
 
 		foreach ($pk_columns as $pk_column) {
 			$has_old = self::hasOld($this->old_values, $pk_column);
-			if (($has_old && self::retrieveOld($this->old_values, $pk_column) !== NULL) || (!$has_old && $this->values[$pk_column] !== NULL)) {
+			if (($has_old && self::retrieveOld($this->old_values, $pk_column) !== NULL) || (!$has_old && isset($this->values[$pk_column]) && $this->values[$pk_column] !== NULL)) {
 				$exists = TRUE;
 			}
 		}
