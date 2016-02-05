@@ -965,7 +965,16 @@ class fCore
 		}
 
 		try {
-			self::call(self::$exception_handler_callback, self::$exception_handler_parameters);
+			self::call(
+				self::$exception_handler_callback,
+				array_merge(
+					self::$exception_handler_parameters,
+					array(
+						self::generateContext(),
+						$info_block
+					)
+				)
+			);
 		} catch (Exception $e) {
 			trigger_error(
 				self::compose(
