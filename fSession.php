@@ -858,7 +858,9 @@ class fSession
 	 */
 	static public function writeCache($id, $values)
 	{
-		return self::$backend->set(self::$key_prefix . $id, $values);
+		$seconds = ini_get('session.gc_maxlifetime');
+
+		return self::$backend->set(self::$key_prefix . $id, $values, $seconds);
 	}
 
 
